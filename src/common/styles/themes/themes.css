@@ -1,0 +1,11 @@
+html.light {
+  --color-bg: #f7f7f7;
+  --color-text: #252525;
+  --color-primary: #6c63ff;
+}
+
+html.dark {
+  --color-bg: #252525;
+  --color-text: #f7f7f7;
+  --color-primary: #6c63ff;
+}

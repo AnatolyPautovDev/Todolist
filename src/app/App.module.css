@@ -1,0 +1,17 @@
+.app {
+  position: relative;
+  padding-top: 40px;
+  padding-inline: 15px;
+  max-width: calc(750px + 15px * 2);
+  margin: 0 auto;
+  min-height: 100vh;
+  transition: .2s;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 26px;
+  text-align: center;
+}
+

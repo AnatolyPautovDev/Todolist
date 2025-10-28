@@ -1,0 +1,14 @@
+@import "../common/styles/themes/themes.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+button {
+  border: none;
+}

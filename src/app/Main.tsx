@@ -1,4 +1,3 @@
-import { containerSx } from "@/common/styles/container.styles.ts"
 import { Todolists } from "@/features/Todolists/ui/Todolists/Todolists.tsx"
 import { AddItemForm } from "@/common/components/AddItemForm/AddItemForm.tsx"
 import { useAppDispatch } from "@/common/hooks/useAppDispatch.ts"
@@ -10,8 +9,8 @@ export const Main = () => {
     dispatch(createTodolistAC(title))
   }
   return (
-    <div style={containerSx}>
-      <AddItemForm onCreateItem={createTodolist} />
+    <div>
+      <AddItemForm onCreateItem={createTodolist} placeholder={"Add todolist"} />
       <Todolists />
     </div>
   )
