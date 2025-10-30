@@ -1,15 +1,17 @@
 import styles from "./changeThemeButton.module.css"
 import Moon from "@/assets/img/moon.svg"
 import Sun from "@/assets/img/sun.svg"
+import { useAppSelector } from "@/common/hooks/useAppSelector.ts"
+import { selectTheme } from "@/app/app-selectors.ts"
+import { useAppDispatch } from "@/common/hooks/useAppDispatch.ts"
+import { changeAppThemeAC } from "@/app/app-reducer.ts"
 
-type Props = {
-  theme: "dark" | "light"
-  setTheme: (theme: "dark" | "light") => void
-}
+export const ChangeThemeButton = () => {
+  const dispatch = useAppDispatch()
+  const theme = useAppSelector(selectTheme)
 
-export const ChangeThemeButton = ({ theme, setTheme }: Props) => {
   const changeThemeHandler = () => {
-    setTheme(theme === "light" ? "dark" : "light")
+    dispatch(changeAppThemeAC({ theme: theme === "light" ? "dark" : "light" }))
   }
 
   return (

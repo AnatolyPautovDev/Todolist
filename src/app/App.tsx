@@ -2,17 +2,13 @@ import "./App.css"
 import "./index.css"
 import { Main } from "@/app/Main.tsx"
 import styles from "./App.module.css"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { ChangeThemeButton } from "@/common/components/ChangeThemeButton/ChangeThemeButton.tsx"
+import { useAppSelector } from "@/common/hooks/useAppSelector.ts"
+import { selectTheme } from "@/app/app-selectors.ts"
 
 export const App = () => {
-  const [theme, setTheme] = useState<"light" | "dark">((localStorage.getItem("theme") as "light" | "dark") || "light")
-
-  useEffect(() => {
-    if (!localStorage.length) {
-      localStorage.setItem("theme", theme)
-    }
-  }, [])
+  const theme = useAppSelector(selectTheme)
 
   useEffect(() => {
     document.documentElement.className = theme // добавляет класс на <html>
@@ -22,7 +18,7 @@ export const App = () => {
   return (
     <div className={styles.app}>
       <h1 className={styles.title}>Todo lists</h1>
-      <ChangeThemeButton theme={theme} setTheme={setTheme} />
+      <ChangeThemeButton />
       <Main />
     </div>
   )
