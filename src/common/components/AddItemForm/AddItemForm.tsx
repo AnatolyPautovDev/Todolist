@@ -1,5 +1,6 @@
 import { type ChangeEvent, useState } from "react"
 import styles from "./AddItemForm.module.css"
+import { AddButton } from "@/common/components/AddButton/AddButton.tsx"
 
 type Props = {
   onCreateItem: (title: string) => void
@@ -25,9 +26,7 @@ export const AddItemForm = ({ onCreateItem, placeholder }: Props) => {
   return (
     <div className={styles.addForm}>
       <input type="text" value={value} onChange={onChangeHandler} className={styles.input} placeholder={placeholder} />
-      <button type="button" onClick={addItemHandler} className={styles.button}>
-        +
-      </button>
+      <AddButton addItemHandler={addItemHandler} />
       {error && <div style={{ color: "red" }}>{error}</div>}
     </div>
   )

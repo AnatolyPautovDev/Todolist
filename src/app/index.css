@@ -1,12 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 @import "../common/styles/themes/themes.css";
 
-* {
+:root {
+  --font-family: "Kanit", sans-serif;
+  --second-family: "Inter", sans-serif;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+*::placeholder {
+  font-family: var(--second-family), sans-serif;
+}
+input {
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  font-family: inherit;
+  background-color: transparent;
+  font-size: 16px;
+  color: var(--color-primary);
+  padding: 6px 16px;
+}
+
+input:focus-visible {
+  outline: 2px solid rgba(108, 99, 255, 0.4);
+  box-shadow: 0 0 0 0 #000;
+}
+
+input::placeholder {
+  color: #c3c1e5;
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
+  font-family: var(--font-family), sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 button {
