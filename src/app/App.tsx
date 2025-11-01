@@ -11,7 +11,7 @@ export const App = () => {
   const theme = useAppSelector(selectTheme)
 
   useEffect(() => {
-    document.documentElement.className = theme // добавляет класс на <html>
+    document.documentElement.dataset.theme = theme // добавляет класс на <html>
     localStorage.setItem("theme", theme)
   }, [theme])
 
