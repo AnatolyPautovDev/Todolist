@@ -3,7 +3,7 @@ import {
   changeTaskTitleAC,
   deleteTaskAC,
   type Task,
-} from "@/features/Todolists/model/tasks-reducer.ts"
+} from "@/features/Todolists/model/tasksSlice.ts"
 import { useAppDispatch } from "@/common/hooks/useAppDispatch.ts"
 import type { ChangeEvent } from "react"
 import { EditableSpan } from "@/common/components/EditableSpan/EditableSpan.tsx"

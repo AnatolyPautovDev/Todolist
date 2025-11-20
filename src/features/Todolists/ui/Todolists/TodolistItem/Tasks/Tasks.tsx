@@ -1,7 +1,7 @@
 import { useAppSelector } from "@/common/hooks/useAppSelector.ts"
-import { selectTasks } from "@/features/Todolists/model/tasks-selectors.ts"
 import type { Todolist } from "@/features/Todolists/model/todolistsSlice.ts"
 import { TaskItem } from "@/features/Todolists/ui/Todolists/TodolistItem/Tasks/TaskItem/TaskItem.tsx"
+import { selectTasksByTodolist } from "@/features/Todolists/model/tasksSlice.ts"
 
 type Props = {
   todolist: Todolist
@@ -9,19 +9,18 @@ type Props = {
 
 export const Tasks = ({ todolist }: Props) => {
   const { id, filter } = todolist
-  const tasks = useAppSelector(selectTasks)
-  let tasksForTodolist = tasks[id]
+  let tasks = useAppSelector((s) => selectTasksByTodolist(s, id))
   if (filter === "active") {
-    tasksForTodolist = tasksForTodolist.filter((t) => !t.isDone)
+    tasks = tasks.filter((t) => !t.isDone)
   }
   if (filter === "completed") {
-    tasksForTodolist = tasksForTodolist.filter((t) => t.isDone)
+    tasks = tasks.filter((t) => t.isDone)
   }
   return (
     <>
-      {tasksForTodolist.length ? (
+      {tasks.length ? (
         <ul>
-          {tasksForTodolist.map((task) => (
+          {tasks.map((task) => (
             <TaskItem task={task} key={task.id} todolistId={id} />
           ))}
         </ul>

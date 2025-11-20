@@ -5,7 +5,7 @@ import { type Todolist } from "@/features/Todolists/model/todolistsSlice.ts"
 import { TodolistTitle } from "@/features/Todolists/ui/Todolists/TodolistItem/TodolistTitle.tsx"
 import { AddItemForm } from "@/common/components/AddItemForm/AddItemForm.tsx"
 import { useAppDispatch } from "@/common/hooks/useAppDispatch.ts"
-import { createTaskAC } from "@/features/Todolists/model/tasks-reducer.ts"
+import { createTaskAC } from "@/features/Todolists/model/tasksSlice.ts"
 
 type Props = {
   todolist: Todolist
