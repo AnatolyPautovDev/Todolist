@@ -4,9 +4,10 @@ import { Todolists } from "@/features/Todolists/ui/Todolists/Todolists.tsx"
 import { AddButton } from "@/common/components/AddButton/AddButton.tsx"
 import styles from "./Main.module.css"
 import { useState } from "react"
+import { AddTodolistModal } from "@/features/Todolists/ui/Todolists/AddTodolistModal/AddTodolistModal.tsx"
 
 export const Main = () => {
-  const [modalIsOpen, setmodalIsOpen] = useState(false)
+  const [modalIsOpen, setModalIsOpen] = useState(false)
 
   // const dispatch = useAppDispatch()
   /*const createTodolist = (title: string) => {
@@ -14,10 +15,10 @@ export const Main = () => {
   }*/
   return (
     <div>
-      {modalIsOpen ? <div>open</div> : null}
+      {modalIsOpen ? <AddTodolistModal /> : null}
       <AddButton
         addItemHandler={() => {
-          setmodalIsOpen(true)
+          setModalIsOpen(true)
         }}
         className={styles.button}
       />
