@@ -1,7 +1,7 @@
 import s from "./TodolistItem.module.css"
 import { FilterButtons } from "./FilterButtons/FilterButtons.tsx"
 import { Tasks } from "@/features/Todolists/ui/Todolists/TodolistItem/Tasks/Tasks.tsx"
-import { type Todolist } from "@/features/Todolists/model/todolists-reducer.ts"
+import { type Todolist } from "@/features/Todolists/model/todolistsSlice.ts"
 import { TodolistTitle } from "@/features/Todolists/ui/Todolists/TodolistItem/TodolistTitle.tsx"
 import { AddItemForm } from "@/common/components/AddItemForm/AddItemForm.tsx"
 import { useAppDispatch } from "@/common/hooks/useAppDispatch.ts"

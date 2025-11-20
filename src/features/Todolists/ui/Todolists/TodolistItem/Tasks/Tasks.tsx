@@ -1,6 +1,6 @@
 import { useAppSelector } from "@/common/hooks/useAppSelector.ts"
 import { selectTasks } from "@/features/Todolists/model/tasks-selectors.ts"
-import type { Todolist } from "@/features/Todolists/model/todolists-reducer.ts"
+import type { Todolist } from "@/features/Todolists/model/todolistsSlice.ts"
 import { TaskItem } from "@/features/Todolists/ui/Todolists/TodolistItem/Tasks/TaskItem/TaskItem.tsx"
 
 type Props = {

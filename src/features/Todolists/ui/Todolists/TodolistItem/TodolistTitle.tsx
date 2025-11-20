@@ -1,4 +1,4 @@
-import { changeTodolistTitleAC, deleteTodolistAC, type Todolist } from "@/features/Todolists/model/todolists-reducer.ts"
+import { changeTodolistTitleAC, deleteTodolistAC, type Todolist } from "@/features/Todolists/model/todolistsSlice.ts"
 import { EditableSpan } from "@/common/components/EditableSpan/EditableSpan.tsx"
 import { useAppDispatch } from "@/common/hooks/useAppDispatch.ts"
 

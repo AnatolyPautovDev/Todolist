@@ -1,6 +1,6 @@
 import s from "./FilterButtons.module.css"
 import { useAppDispatch } from "@/common/hooks/useAppDispatch.ts"
-import { changeTodolistFilterAC } from "@/features/Todolists/model/todolists-reducer.ts"
+import { changeTodolistFilterAC } from "@/features/Todolists/model/todolistsSlice.ts"
 
 type Props = {
   todolistId: string

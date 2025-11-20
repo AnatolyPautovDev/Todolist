@@ -1,5 +1,5 @@
 import { createAction, createReducer, nanoid } from "@reduxjs/toolkit"
-import { createTodolistAC, deleteTodolistAC } from "@/features/Todolists/model/todolists-reducer.ts"
+import { createTodolistAC, deleteTodolistAC } from "@/features/Todolists/model/todolistsSlice.ts"
 
 export type Tasks = Record<string, Task[]>
 
