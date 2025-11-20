@@ -1,5 +1,5 @@
 import { useAppSelector } from "@/common/hooks/useAppSelector.ts"
-import { selectTodolists } from "@/features/Todolists/model/todolists-selectors.ts"
+import { selectTodolists } from "@/features/Todolists/model/todolistsSlice.ts"
 import { TodolistItem } from "@/features/Todolists/ui/Todolists/TodolistItem/TodolistItem.tsx"
 import { useState } from "react"
 import { SearchTodolist } from "@/features/Todolists/ui/Todolists/SearchTodolist/SearchTodolist.tsx"

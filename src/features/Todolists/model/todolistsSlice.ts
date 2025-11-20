@@ -36,8 +36,12 @@ const todolistsSlice = createSlice({
       }
     }),
   }),
+  selectors: {
+    selectTodolists: (state) => state,
+  },
 })
 
 export const TodolistReducer = todolistsSlice.reducer
 export const { changeTodolistFilterAC, changeTodolistTitleAC, createTodolistAC, deleteTodolistAC } =
   todolistsSlice.actions
+export const { selectTodolists } = todolistsSlice.selectors
